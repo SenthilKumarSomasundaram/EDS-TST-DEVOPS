@@ -3,7 +3,7 @@ env:
   SNOWSQL_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
   SNOWSQL_USER: ${{ secrets.SF_USER }}
   SNOWSQL_PASSWORD: ${{ secrets.SF_PASSWORD }}
-  SNOWSQL_WAREHOUSE: ${{ SF_WAREHOUSE }}
+
     
 on: push                                                  
 jobs:                         
@@ -23,8 +23,12 @@ jobs:
       run: echo $SNOWSQL_ACCOUNT
     - name: UserDetails
       run: echo $SNOWSQL_USER
-    - name: Warehouse
-      run: echo $SNOWSQL_WAREHOUSE
-
+    - name: Check
+      run: |
+       if [ -z "$SNOWSQL_PASSWORD" ]; then
+            echo "Empty Password"
+       else
+            echo " Not Empty Password"
+       fi
     - name: Test installation
       run:  ~/snowflake/snowsql -v
