@@ -1,13 +1,15 @@
 name: SnowSQL
-environment: DEV
-env:
-  SNOWSQL_DEST: ~/snowflake
-  SNOWSQL_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
-  SNOWSQL_USER: ${{ secrets.SF_USER }}
-  SNOWSQL_PWD: ${{ secrets.SF_PASSWORD }}
+
   
 on: push                                                  
-jobs:                         
+jobs:
+  build:
+environment: DEV
+  env:
+    SNOWSQL_DEST: ~/snowflake
+    SNOWSQL_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
+    SNOWSQL_USER: ${{ secrets.SF_USER }}
+    SNOWSQL_PWD: ${{ secrets.SF_PASSWORD }}
   executequery:                           
     name: Install SnowSQL                          
     runs-on: ubuntu-latest                           
