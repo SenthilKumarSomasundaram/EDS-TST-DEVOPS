@@ -1,0 +1,5 @@
+on: push                                                  
+jobs:                         
+  executequery:                           
+    name: Install SnowSQL                          
+    runs-on: ubuntu-latest
