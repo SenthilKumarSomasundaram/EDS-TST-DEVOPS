@@ -1,4 +1,5 @@
 name: SnowSQL
+environment: DEV
 env:
   SNOWSQL_DEST: ~/snowflake
   SNOWSQL_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
