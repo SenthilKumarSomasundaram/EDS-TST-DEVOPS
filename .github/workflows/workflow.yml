@@ -3,7 +3,7 @@ env:
   SNOWSQL_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
   SNOWSQL_USER: ${{ secrets.SF_USER }}
   SNOWSQL_PASSWORD: ${{ secrets.SF_PASSWORD }}
-
+  SNOWSQL_WAREHOUSE: ${{ vars.SF_WAREHOUSE }}
     
 on: push                                                  
 jobs:                         
@@ -19,6 +19,8 @@ jobs:
       run: SNOWSQL_DEST=~/snowflake SNOWSQL_LOGIN_SHELL=~/.profile bash snowsql-1.2.9-linux_x86_64.bash
     - name: List the values
       run: cat ~/.profile
+    - name: Warehouse
+      run: echo "$SNOWSQL_WAREHOUSE"
     - name: Account
       run: echo "$SNOWSQL_ACCOUNT"
     - name: UserDetails
@@ -29,5 +31,6 @@ jobs:
             echo "Empty Password"
        else
             echo " Not Empty"
+       fi
     - name: Test installation
       run:  ~/snowflake/snowsql -v
