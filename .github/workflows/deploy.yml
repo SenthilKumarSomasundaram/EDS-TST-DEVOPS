@@ -2,7 +2,7 @@ name: SnowSQL
 env:
   SNOWSQL_DEST: ~/snowflake
   SNOWSQL_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
-  SNOWSQL_USER: ${{ secrets.SF_USER }}
+  SNOWSQL_USER: SVC_PAS_CDC
   SNOWSQL_PWD: ${{ secrets.SF_PASSWORD }}
   
 on: push                                                  
