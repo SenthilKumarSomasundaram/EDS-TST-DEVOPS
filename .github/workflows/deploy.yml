@@ -2,8 +2,8 @@ name: SnowSQL
 env:
   SNOWSQL_DEST: ~/snowflake
   SNOWSQL_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
-  SNOWSQL_USER:SVC_PAS_CDC
-  SNOWSQL_PWD:Csaa1234
+  SNOWSQL_USER: SVC_PAS_CDC
+  SNOWSQL_PWD: Csaa1234
   
 on: push                                                  
 jobs:                         
