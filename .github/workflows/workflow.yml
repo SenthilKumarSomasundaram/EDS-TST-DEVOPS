@@ -1,11 +1,11 @@
 name: SnowSQL
-env:
+env: "DEV"
   SNOWSQL_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
   SNOWSQL_USER: ${{ secrets.SF_USER }}
   SNOWSQL_PASSWORD: ${{ secrets.SF_PASSWORD }}
+   
+on: push
 
-    
-on: push                                                  
 jobs:                         
   executequery:                           
     name: Install SnowSQL                          
