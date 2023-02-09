@@ -23,9 +23,9 @@ environment: DEV
     - name: List the values
       run: cat ~/.profile
     - name: Account
-      run: echo SNOWSQL_ACCOUNT
+      run: echo $SNOWSQL_ACCOUNT
     - name: UserDetails
-      run: echo SNOWSQL_USER
+      run: echo $SNOWSQL_USER
 
     - name: Test installation
       run:  ~/snowflake/snowsql -v
