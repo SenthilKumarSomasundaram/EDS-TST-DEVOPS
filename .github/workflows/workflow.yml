@@ -3,7 +3,7 @@ env:
   SNOWSQL_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
   SNOWSQL_USER: ${{ secrets.SF_USER }}
   SNOWSQL_PASSWORD: ${{ secrets.SF_PASSWORD }}
-  SNOWSQL_WAREHOUSE: ${{ variables.SF_WAREHOUSE }}
+  SNOWSQL_WAREHOUSE: ${{ SF_WAREHOUSE }}
     
 on: push                                                  
 jobs:                         
