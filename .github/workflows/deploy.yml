@@ -1,7 +1,8 @@
 name: SnowSQL
 env:
   SNOWSQL_DEST: ~/snowflake
-  SNOWSQL_ACCOUNT:csaa.us-west-2.privatelink
+  SNOWSQL_ACCOUNT: csaa.us-west-2.privatelink
+  SNOWSQL_USER: SVC_PAS_CDC
   SNOWSQL_PWD: Csaa1234
   
 on: push                                                  
