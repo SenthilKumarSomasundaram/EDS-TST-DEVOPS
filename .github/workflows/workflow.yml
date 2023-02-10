@@ -21,9 +21,9 @@ jobs:
       run: cat ~/.profile
     - name: Warehouse-1
       run: echo "$SNOWSQL_WAREHOUSE"
-    - name: Account
+    - name: Account-1
       run: echo "$SNOWSQL_ACCOUNT"
-    - name: UserDetails
+    - name: UserDetails-1
       run: echo "$SNOWSQL_USER"
     - name: Check
       run: |
