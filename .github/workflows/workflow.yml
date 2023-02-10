@@ -36,8 +36,8 @@ jobs:
       run:  ~/snowflake/snowsql -v
     - name: Execute SQL against Snowflake
       run: |
-        snowsql -a ${SNOWSQL_ACCOUNT} -u ${SNOWSQL_USER} -p ${SNOWSQL_PASSWORD} -w ${SNOWSQL_WAREHOUSE}
+        ~/snowflake/snowsql -a ${SNOWSQL_ACCOUNT} -u ${SNOWSQL_USER} -p ${SNOWSQL_PASSWORD} -w ${SNOWSQL_WAREHOUSE}
     - name: Run SQL Script
       run: |
-        snowsql -f code.sql
+        ~/snowflake/snowsql -f code.sql
     
