@@ -35,4 +35,9 @@ jobs:
     - name: Test installation
       run:  ~/snowflake/snowsql -v
     - name: Execute SQL against Snowflake
-      run:  ~/snowflake/snowsql -f code.sql;  
+      run: |
+        snowsql -a ${SNOWSQL_ACCOUNT} -u ${SNOWSQL_USER} -p ${SNOWSQL_PASSWORD} -w ${SNOWSQL_WAREHOUSE}
+    - name: Run SQL Script
+      run: |
+        snowsql -f code.sql
+    
