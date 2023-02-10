@@ -23,7 +23,7 @@ jobs:
       run: echo "$SNOWSQL_WAREHOUSE"
     - name: Account-1
       run: echo "$SNOWSQL_ACCOUNT"
-    - name: UserDetails-2
+    - name: UserDetails-OM
       run: echo "$SNOWSQL_USER"
     - name: Check
       run: |
